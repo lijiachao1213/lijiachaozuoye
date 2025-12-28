@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 数码商城</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>数码商城</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> 首页</a>
+                <a href="profile.html"><i class="fas fa-user"></i> 个人中心</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-detail-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img id="mainImage" src="素材图片/1dae1081a870e677.jpg" alt="商品主图">
+            </div>
+            <div class="thumbnails">
+                <img src="素材图片/1dae1081a870e677.jpg" 
+                     onclick="changeImage(this.src)" class="active">
+                <img src="素材图片/cewSsjgev6tdc.jpg" 
+                     onclick="changeImage(this.src)">
+                <img src="素材图片/R-C.jpg" 
+                     onclick="changeImage(this.src)">
+            </div>
+        </div>
+        
+        <div class="product-info">
+            <h1 id="productTitle">iPhone 15 Pro</h1>
+            
+            <div class="product-meta">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span class="rating-text">4.8 (1.2万+评价)</span>
+                </div>
+                <div class="sku">商品编号: IP15PRO256</div>
+            </div>
+            
+            <div class="price-section">
+                <span class="current-price">¥8,999</span>
+                <span class="original-price">¥9,999</span>
+                <span class="discount">9折</span>
+            </div>
+            
+            <div class="product-specs">
+                <h3>产品规格</h3>
+                <ul>
+                    <li><strong>颜色：</strong><span class="color-options">
+                        <span class="color-option active" style="background-color: #1A1D28;"></span>
+                        <span class="color-option" style="background-color: #8A8A8F;"></span>
+                        <span class="color-option" style="background-color: #F5E0C9;"></span>
+                    </span></li>
+                    <li><strong>容量：</strong>
+                        <button class="spec-btn active">256GB</button>
+                        <button class="spec-btn">512GB</button>
+                        <button class="spec-btn">1TB</button>
+                    </li>
+                    <li><strong>配送：</strong> 预计明天送达</li>
+                    <li><strong>服务：</strong> 7天无理由退货</li>
+                </ul>
+            </div>
+            
+            <div class="quantity-selector">
+                <label>数量：</label>
+                <div class="quantity-control">
+                    <button onclick="updateQuantity(-1)">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                    <button onclick="updateQuantity(1)">+</button>
+                </div>
+                <span class="stock-info">库存：充足</span>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn-cart" onclick="addToCart()">
+                    <i class="fas fa-shopping-cart"></i> 加入购物车
+                </button>
+                <button class="btn-buy" onclick="buyNow()">
+                    <i class="fas fa-bolt"></i> 立即购买
+                </button>
+                <button class="btn-wishlist" onclick="addToWishlist()">
+                    <i class="fas fa-heart"></i> 收藏
+                </button>
+            </div>
+            
+            <div class="product-description">
+                <h3>商品描述</h3>
+                <p>iPhone 15 Pro采用先进的A17 Pro芯片，带来前所未有的性能表现。钛金属机身设计，更轻更坚固。4800万像素主摄，支持专业级摄影。Type-C接口，充电传输更便捷。</p>
+                <ul>
+                    <li>A17 Pro芯片，性能提升20%</li>
+                    <li>6.7英寸超视网膜XDR显示屏</li>
+                    <li>4800万像素主摄像头</li>
+                    <li>钛金属边框设计</li>
+                    <li>Type-C快速充电接口</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
